@@ -1,5 +1,5 @@
 **Launch Badge for DBRs Fork in JupyterLab:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course.git/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dbachy/haskell-course-ME.git/HEAD)
 
 
 # Haskell Course
