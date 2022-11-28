@@ -31,5 +31,4 @@ f4 x y z = x == (y ++ z)
 -- Question 5
 -- Can you also define in Haskell list of lists? Did we showed any example of that? How would you access the inner
 -- most elements?
-{- a list of lists is created by using two brackets instead of one.  For example [[a]] is a list inside a list. -}
-
+{- a list of lists is created by using two brackets instead of one.  For example [[a]] is the type signature for a list inside a list which could be lst1 = [[123],[456]] The bang operator could access this list, for example: lst !! 1 !! 2 = 3-}
