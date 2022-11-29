@@ -19,6 +19,14 @@ maxAllowed kwDevice hrsDevice maxAllowed
 
 -- In the previous function, return the excess/savings of consumption as part of the message.
 
+maxAllowed2 :: Double -> Double -> Double -> String
+maxAllowed2 kwDevice hrsDevice maxAllowed
+    | consumption < maxAllowed = "consumption is less than allowed by the amount of: " ++ show savings
+    | consumption == maxAllowed = "consumption is equal to allowed"
+    | otherwise = "the max is exceeded"
+    where
+        consumption = kwDevice * (hrsDevice * 30)
+        savings = maxAllowed - consumption
 
 -- Question 3
 -- Write a function that showcases the advantages of using let expressions to split a big expression into smaller ones.
