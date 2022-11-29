@@ -4,6 +4,13 @@
 -- The function has to take the hourly consumption of an electrical device, the hours of daily use, and the maximum monthly consumption allowed.
 -- (Monthly usage = consumption (kW) * hours of daily use (h) * 30 days).
 
+maxAllowed :: Double -> Double -> Double -> String
+maxAllowed kwDevice hrsDevice maxAllowed
+    | consumption < maxAllowed = "consumption is less than allowed"
+    | consumption == maxAllowed = "consumption is equal to allowed"
+    | otherwise = "the max is exceeded"
+    where
+        consumption = kwDevice * (hrsDevice * 30)
 
 -- Question 2
 -- Prelude:
