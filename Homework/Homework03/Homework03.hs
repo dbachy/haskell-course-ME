@@ -33,20 +33,23 @@ maxAllowed2 kwDevice hrsDevice maxAllowed
 -- Then, share it with other students in Canvas.
 
 {-CHRISTMAS PRESENTS CALCULATOR: Enter how good the child has been, on a scale of 1 to 10 (hG).  Then enter how old the  
-child is between 4 and 14 (hO).  The function will calculate how many presents to give at Christmas, or if the child 
-should be given a lump of coal as punishment.-}
+child is between 4 and 14 (hO).  This function will calculate how many presents to give them at Christmas, or if the child 
+should just be gifted a lump of coal as punishment. 
+This calculator teaches growing children to be good, weans older children off presents, and avoids traumatizing 
+children under the age of 10. 
+No- I never received a lump of coal for Christmas so I don't know how it feels.-}
 
 christmasP :: Double -> Double -> String
 christmasP hG hO =
     let
         x = (hG + 4)
+        y = (hO/2)
+        z = round (x-y)
     in
-        if x - hO > 0 
-            then show (x - hO) 
+        if x - y > 0 
+            then show z 
             else "wrap a piece of coal for the child"
         
-
-
 
 -- Question 4
 -- Write a function that takes in two numbers and returns their quotient such that it is not greater than 1.
