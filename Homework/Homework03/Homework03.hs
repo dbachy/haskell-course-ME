@@ -56,6 +56,7 @@ christmasP hG hO =
 -- Return the number as a string, and in case the divisor is 0, return a message why the division is not
 -- possible. To implement this function using both guards and if-then-else statements.  
 
+numsToQuotGuard :: Double -> Double -> String
 
 -- Question 5
 -- Write a function that takes in two numbers and calculates the sum of squares for the product and quotient
