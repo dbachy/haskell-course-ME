@@ -33,7 +33,7 @@ maxAllowed2 kwDevice hrsDevice maxAllowed
 -- Then, share it with other students in Canvas.
 
 {-CHRISTMAS PRESENTS CALCULATOR: Enter how good the child has been, on a scale of 1 to 10 (hG).  Then enter how old the  
-child is between 4 and 14 (hO).  This function will calculate how many presents to give them at Christmas, or if the child 
+child is between 4 and 14 (hO).  This function calculates how many presents to give them at Christmas, or if the child 
 should just be gifted a lump of coal as punishment. 
 This calculator teaches growing children to be good, weans older children off presents, and avoids traumatizing 
 children under the age of 10. 
@@ -50,13 +50,25 @@ christmasP hG hO =
             then show z 
             else "wrap a piece of coal for the child"
         
-
 -- Question 4
 -- Write a function that takes in two numbers and returns their quotient such that it is not greater than 1.
 -- Return the number as a string, and in case the divisor is 0, return a message why the division is not
 -- possible. To implement this function using both guards and if-then-else statements.  
 
 numsToQuotGuard :: Double -> Double -> String
+numsToQuotGuard x y
+    | x == 0 = "division is not possible because x = 0" 
+    | y == 0 = "division is not possible because y = 0"
+    | x < y = show (x/y)
+    | x > y = show (y/x)
+
+numsToQuotIfThen :: Double -> Double -> String
+numsToQuotIfThen x y =
+    if x == 0 then "division is not possible because x = 0" else
+        if y == 0 then "division is not possible because y = 0" else
+            if x < y then show (x/y) else
+                if x > y then show (y/x) else "error"
+
 
 -- Question 5
 -- Write a function that takes in two numbers and calculates the sum of squares for the product and quotient
