@@ -74,3 +74,7 @@ numsToQuotIfThen x y =
 -- Write a function that takes in two numbers and calculates the sum of squares for the product and quotient
 -- of those numbers. Write the function such that you use a where block inside a let expression and a
 -- let expression inside a where block. 
+
+sumPQ1 :: Double -> Double -> Double
+sumPQ1 x y = let a = (x*y)^2; b = (x/y)^2
+                in a + b
