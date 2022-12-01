@@ -32,6 +32,21 @@ maxAllowed2 kwDevice hrsDevice maxAllowed
 -- Write a function that showcases the advantages of using let expressions to split a big expression into smaller ones.
 -- Then, share it with other students in Canvas.
 
+{-CHRISTMAS PRESENTS CALCULATOR: Enter how good the child has been, on a scale of 1 to 10 (hG).  Then enter how old the  
+child is between 4 and 14 (hO).  The function will calculate how many presents to give at Christmas, or if the child 
+should be given a lump of coal as punishment.-}
+
+christmasP :: Double -> Double -> String
+christmasP hG hO =
+    let
+        x = (hG + 4)
+    in
+        if x - hO > 0 
+            then show (x - hO) 
+            else "wrap a piece of coal for the child"
+        
+
+
 
 -- Question 4
 -- Write a function that takes in two numbers and returns their quotient such that it is not greater than 1.
