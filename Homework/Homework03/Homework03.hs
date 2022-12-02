@@ -76,5 +76,16 @@ numsToQuotIfThen x y =
 -- let expression inside a where block. 
 
 sumPQ1 :: Double -> Double -> Double
-sumPQ1 x y = let a = (x*y)^2; b = (x/y)^2
-                in a + b
+sumPQ1 x y = let d = a; e = b in d + e 
+                where 
+                 a = (x*y)^2; b = (x/y)^2
+
+{-
+sumPQ2 :: Double -> Double -> Double
+sumPQ2 x y =  d + e where d = a; e = b
+                    let a = a1; b = b1 in a1 = (x*y)^2; b1 = (x/y)^2
+
+              
+sumPQ3 :: Double -> Double -> Double
+sumPQ3 x y = let a = (x*y)^2; b = (x/y)^2 in a + b
+-}
