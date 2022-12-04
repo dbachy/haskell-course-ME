@@ -87,4 +87,5 @@ sumPQ2 x y =  d + e where d = a; e = b
               
 sumPQ3 :: Double -> Double -> Double
 sumPQ3 x y = let a = (x*y)^2; b = (x/y)^2 in a + b
+
 -}
