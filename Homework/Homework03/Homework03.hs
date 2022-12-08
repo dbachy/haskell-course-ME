@@ -76,16 +76,16 @@ numsToQuotIfThen x y =
 -- let expression inside a where block. 
 
 sumPQ1 :: Double -> Double -> Double
-sumPQ1 x y = let d = a; e = b in d + e 
-                where 
-                 a = (x*y)^2; b = (x/y)^2
-
-{-
+sumPQ1 x y = 
+    let fun1 = sqrt a where a = x * y
+    in fun1 + fun2
+    where 
+        fun2 = let b = x / y in sqrt b 
+        
 sumPQ2 :: Double -> Double -> Double
-sumPQ2 x y =  d + e where d = a; e = b
-                    let a = a1; b = b1 in a1 = (x*y)^2; b1 = (x/y)^2
-              
-sumPQ3 :: Double -> Double -> Double
-sumPQ3 x y = let a = (x*y)^2; b = (x/y)^2 in a + b
+sumPQ2 x y = 
+    let fun1 = show d where d = e
+    in (read fun1) + fun2 
+    where 
+        e = sqrt (x*y); fun2 = let f = (x/y) in sqrt f
 
--}
