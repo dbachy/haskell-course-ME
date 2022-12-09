@@ -55,6 +55,12 @@ christmasP hG hO =
 -- Return the number as a string, and in case the divisor is 0, return a message why the division is not
 -- possible. To implement this function using both guards and if-then-else statements.  
 
+numsToQuot :: Double -> Double -> String
+numsToQuot x y
+    | x <= y = if x == 0 || y == 0 then "division with zero is not possible" else show (x/y)
+    | x > y = if x == 0 || y == 0 then "division with zero is not possible" else show (y/x)
+
+
 numsToQuotGuard :: Double -> Double -> String
 numsToQuotGuard x y
     | x == 0 = "division is not possible because x = 0" 
