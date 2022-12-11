@@ -13,15 +13,17 @@ extract1 [([_,_],[_,x]),([_,_],[_,_])]= show x
 -- removes them. Else, it does nothing. Do it two times, one with multiple function definitions and one with
 -- case expressions.
 
-remove (x:y:rest) =show [x,y]
+remove :: [Int] -> String
+remove (x:y:rest) = show [x, y]
+remove [x] = show [x]
+remove [] = "no elements were given"
+
 
 remove1 list =
     case list of 
-        (x) -> show x
         (x:y:rest) -> show [x,y]
-
-
-
+        [x] -> show [x]
+        [] -> "no elements were given"
 
 
 -- Question 3
