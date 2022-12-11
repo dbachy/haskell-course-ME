@@ -5,10 +5,23 @@
 nested :: [([Int], [Int])]
 nested = [([1,2],[3,4]), ([5,6],[7,8])]
 
+extract [([_,_],[_,x]),(_)]= show x
+extract1 [([_,_],[_,x]),([_,_],[_,_])]= show x
+
 -- Question 2
 -- Write a function that takes a list of elements of any type and, if the list has 3 or more elements, it
 -- removes them. Else, it does nothing. Do it two times, one with multiple function definitions and one with
 -- case expressions.
+
+remove (x:y:rest) =show [x,y]
+
+remove1 list =
+    case list of 
+        (x) -> show x
+        (x:y:rest) -> show [x,y]
+
+
+
 
 
 -- Question 3
