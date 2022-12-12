@@ -29,15 +29,23 @@ remove1 list =
 -- Question 3
 -- Create a function that takes a 3-element tuple (all of type Integer) and adds them together
 
+addTups :: (Int, Int, Int) -> Int
+addTups (a, b, c) = a + b + c
 
 -- Question 4
 -- Implement a function that returns True if a list is empty and False otherwise.
 
+chkList :: [a] -> Bool
+chkList [] = True
+chkList (a) = False
 
 -- Question 5
 -- Write the implementation of the tail function using pattern matching. But, instead of failing if
 -- the list is empty, return an empty list.
 
+atail :: [a] -> [a]
+atail (x:xs) = xs
+atail [] = []
 
 -- Question 6
 -- write a case expression wrapped in a function that takes an Int and adds one if it's even. Otherwise does nothing. 
