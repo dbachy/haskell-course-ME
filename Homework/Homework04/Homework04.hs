@@ -51,3 +51,7 @@ atail [] = []
 -- write a case expression wrapped in a function that takes an Int and adds one if it's even. Otherwise does nothing. 
 -- (Use the `even` function to check if the number is even.)
 
+evenAdd :: Int -> Int
+evenAdd x = case even x of
+    True -> x
+    otherwise -> x + 1
