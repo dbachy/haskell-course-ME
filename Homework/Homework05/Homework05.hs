@@ -19,6 +19,15 @@ curry' f x y = f (x,y)
 -- Use higher-order functions, partial application, and point-free style to create a function that checks if a word has an uppercase letter.
 -- Start with using just higher-order functions and build from there. 
 
+wordT4 :: String -> Bool
+wordT4 = any $ flip elem ['A'..'Z']
+
+wordT5 :: String -> Bool
+wordT5 = any $ \x -> elem x ['A'..'Z']
+
+--Why doesn't wordT6 also work below:
+--wordT6 :: String -> Bool
+--wordT6 = \x -> any $ elem x ['A'..'Z']
 
 -- Create the `count` function that takes a team ("Red", "Blue", or "Green") and returns the amount of votes the team has inside `votes`.
 
