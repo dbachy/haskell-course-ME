@@ -34,6 +34,9 @@ wordT5 = any $ \x -> elem x ['A'..'Z']
 votes :: [String]
 votes = ["Red", "Blue", "Green", "Blue", "Blue", "Red"]
 
+count' :: String -> Int
+count' x = length $ filter (x==) votes
+
 -- Create a one-line function that filters `cars` by brand and then checks if there are any left.
 
 cars :: [(String,Int)]
