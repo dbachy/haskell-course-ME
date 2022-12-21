@@ -41,3 +41,9 @@ count' x = length $ filter (x==) votes
 
 cars :: [(String,Int)]
 cars = [("Toyota",0), ("Nissan",3), ("Ford",1)]
+
+carCheck1 :: String -> Bool
+carCheck1 x = (\[(_,b)]-> if b>0 then True else False) $ filter (\(a,_) -> a==x) cars
+
+carCheck2 :: String -> Bool
+carCheck2 x = any (\(_,b) -> b > 0) $ filter (\(a,_)-> a==x) cars
