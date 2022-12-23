@@ -191,18 +191,20 @@ Everything else can be safely ignored
 - Kinds
 - The `newType` keyword
 
-### 10. Creating Type Classes and Instances
+### 10. Creating Type Classes and Instances [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F10-Creating-Type-Classes-and-Instances.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=I6tmM3wNGEI)
 
-- Revisiting Type Classes
+- Overloading
+- Steps to create Type Classes and Instances
 - The `Eq` type class
-  - Defining the `Eq` type class
-  - Defining an instance for the `Eq` type class
-  - Improving our `Eq` type class (minimal complete definition)
-  - Defining an instance for a parameterize type.
-- The `Ord` type class
-  - Exploring `Ord` type class (Subclassing)
+  - Defining the Type Class
+  - Defining multiple instances
+  - Improving our `Eq` type class with mutual recursion (and Minimal Complete Definitions)
+  - Defining an instance for a parameterized type.
+- The `WeAccept` Type Class
+- The `Container` Type Class
+- Exploring `Ord` type class (Subclassing)
 - Deriving
-- Complete example
+  - Deriving can go wrong
 
 ### 11. Basic IO
 
