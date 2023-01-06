@@ -5,6 +5,8 @@
 -- >>> repeat 17
 --[17,17,17,17,17,17,17,17,17...
 
+repeat'::Int->[Int]
+repeat' x = [x] ++ repeat' x
 
 -- Question 2
 -- Using the `repeat'` function and the `take` function we defined in the lesson (comes with Haskell),
