@@ -1,3 +1,4 @@
+import Distribution.Simple.Utils (xargs)
 -- Question 1
 -- Write a function called `repeat'` that takes a value and creates an infinite list with
 -- the value provided as every element of the list.
@@ -5,7 +6,7 @@
 -- >>> repeat 17
 --[17,17,17,17,17,17,17,17,17...
 
-repeat'::Int->[Int]
+repeat' :: a -> [a]
 repeat' x = [x] ++ repeat' x
 
 -- Question 2
@@ -19,6 +20,11 @@ repeat' x = [x] ++ repeat' x
 -- []
 -- >>> replicate 4 True
 -- [True,True,True,True]
+
+replicate' :: Int -> a -> [a]
+replicate' n x 
+  | n <= 0 = []
+  | otherwise = take n $ repeat' x
 
 
 -- Question 3
