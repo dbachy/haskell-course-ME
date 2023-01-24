@@ -206,20 +206,21 @@ Everything else can be safely ignored
 - Deriving
   - Deriving can go wrong
 
-### 11. Basic IO
+### 11. Basic IO  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/input-output-hk/haskell-course/HEAD?labpath=%2Flessons%2F11-Basic-IO.ipynb) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=0xQ8j6h8bNc)
 
-- We need side effects
-- What is IO
-- main + putStrLn + composing other functions
-- `>>`
-- `>>=`
-- do notation
-  - `do`
-  - `<-`
-  - `let`
-- Some examples
-- Read/Write to console
-- Read/Write to file
+- Pure functions
+- Introduction to IO actions
+- IO actions under the hood
+- IO actions in practice
+  - The `()` type
+- Interacting with the user
+  - `getChar`, `getLine`, and `putStrLn`
+- Actions are first-class values
+- Composing IO actions (`>>` and `>>=` operators)
+- The `do` block
+  - Using `let`, nesting do-blocks, escaping `IO` and `return`
+- The `main` action
+- Concepts and syntax recap
 
 ### 12. Pragmas, Modules, and Cabal
 
