@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Use foldr" #-}
 import Distribution.Simple.Utils (xargs)
 -- Question 1
 -- Write a function called `repeat'` that takes a value and creates an infinite list with
@@ -33,6 +35,10 @@ replicate' n x
 -- >>> concat' [[1,2],[3],[4,5,6]]
 -- [1,2,3,4,5,6]
 
+concat' :: [[a]] -> [a]
+concat' [] = []
+concat' (a:as) = a ++ concat' as
+
 
 -- Question 4
 -- Write a function called `zip'` that takes two lists and returns a list of
@@ -53,6 +59,10 @@ replicate' n x
 -- >>> zip' [1..] []
 -- []
 
+zip' :: [a] -> [b] -> [(a,b)]
+zip' _ [] = []
+zip' [] _ = []
+zip' (a:as) (b:bs) = (a,b) : zip' as bs
 
 
 -- Question 5
