@@ -94,6 +94,11 @@ zipWith' f (a:as) (b:bs) = f a b : zipWith' f as bs
 -- >>> takeWhile (< 0) [1,2,3]
 -- []
 
+takeWhile' :: (a -> Bool) -> [a] -> [a]
+takeWhile' f (a:as) 
+    | f a = a : takeWhile f as
+    | otherwise = []
+
 
 -- Question 7 (More difficult)
 -- Write a function that takes in an integer n, calculates the factorial n! and
