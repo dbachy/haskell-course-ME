@@ -78,6 +78,10 @@ zip' (a:as) (b:bs) = (a,b) : zip' as bs
 -- >>> zipWith (+) [1, 2, 3] [4, 5, 6]
 -- [5,7,9]
 
+zipWith' :: (a->b->c) -> [a] -> [b] -> [c]
+zipWith' f _ [] = []
+zipWith' f [] _ = []
+zipWith' f (a:as) (b:bs) = f a b : zipWith' f as bs
 
 -- Question 6
 -- Write a function called `takeWhile'` that takes a precate and a list and
