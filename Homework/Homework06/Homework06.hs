@@ -104,6 +104,15 @@ takeWhile' f (a:as)
 -- Write a function that takes in an integer n, calculates the factorial n! and
 -- returns a string in the form of 1*2* ... *n = n! where n! is the actual result.
 
+fs :: Integer -> String
+fs n
+  | n == 0 = "Enter a value for n"
+  | otherwise = fs' n n
+
+fs' :: Integer -> Integer -> String
+fs' n 1 = "1=" ++ show (product [1..n]) ++ "!"
+fs' x y = show y ++ "*" ++ fs' x (y-1)
+
 
 -- Question 8
 -- Below you have defined some beer prices in bevogBeerPrices and your order list in
